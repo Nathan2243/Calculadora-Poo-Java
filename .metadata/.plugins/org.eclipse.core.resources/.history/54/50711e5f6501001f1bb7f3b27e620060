@@ -1,0 +1,22 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraPoo {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		Calculadora c = new Calculadora(5, 5);
+		
+		// metodo do operador a ser acionado
+		c.setOperador();
+		System.out.println(c.operadorAdicao());	
+		System.out.println(c.operadorSubtracao());
+		System.out.println(c.operadorDivisao());
+		System.out.println(c.operadorSubtracao());
+		
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class CalculadoraPoo {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		Calculadora c = new Calculadora(0, 0);
+		
+		// metodo do operador a ser acionado
+		c.setOperador();
+		
+		// metodos dos operadores
+		
+		public int operadorAdicao() {
+			if (c.setOperador() == "+")
+				return numero1 + numero2
+		}
+
+	}
+
+}

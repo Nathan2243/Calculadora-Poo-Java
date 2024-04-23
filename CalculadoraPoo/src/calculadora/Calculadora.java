@@ -1,0 +1,61 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class Calculadora {
+	private int numero1;
+	private int numero2;
+	private String operador;
+
+	// Construtor
+	public Calculadora(int numero1, int numero2) {
+		this.numero1 = numero1;
+		this.numero2 = numero2;
+	}
+
+	public int getNumero1() {
+		return numero1;
+	}
+
+	public int getNumero2() {
+		return numero2;
+	}
+
+	public String getOperador() {
+		return operador;
+	}
+
+	public void setOperador() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite um operador: ");
+		String inputOperador = sc.nextLine();
+		this.operador = inputOperador;
+	}
+
+	// metodo dos operadores
+
+	public void operadorAdicao() {
+		if (operador.equals("+"))
+			System.out.println(numero1 + numero2);
+	}
+
+	public void operadorSubtracao() {
+		if (operador.equals("-"))
+			System.out.println(numero1 - numero2);
+	}
+
+	public void operadorMultiplicacao() {
+		if (operador.equals("*"))
+			System.out.println(numero1 * numero2);
+	}
+
+	public void operadorDivisao() {
+		try {
+			if (operador.equals("/"))
+				System.out.println(numero1 / numero2);
+		} catch (ArithmeticException  e) {
+			System.err.println("Você tentou dividir por zero! ");
+		}
+	}
+
+}
